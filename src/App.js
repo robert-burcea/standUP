@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
+import Printer from './Printer'
+import {useEffect, useState} from 'react'
+import Editor from './Editor'
+import Header from './Header'
+import React from 'react'
+import UserContext from './UserContext'
+import { useScreen, useSetScreen } from './UserContext'
+import AddJoke from './AddJoke'
 
-function App() {
+function App() {  
+  const screen = useScreen();
+  const changeScreen = useSetScreen();
+  useEffect(() => {
+    localStorage.setItem('jokes', JSON.stringify(screen.jokes));
+  }, [screen])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {console.log(screen)}
+      {screen.name === 'initial' ? <Printer /> : <></>}
+      {screen.name === 'editor' ? <Editor /> : <></>}
+      {screen.name === 'addJoke' ? <AddJoke /> : <></>}
     </div>
   );
 }

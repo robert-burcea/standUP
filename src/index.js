@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './css/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import UserContext from './UserContext'
+
+const jokes = JSON.parse(localStorage.getItem('jokes'));
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <UserContext value={{name:'initial', jokeID:null, jokes: jokes}}><App /></UserContext>,
   document.getElementById('root')
 );
 
