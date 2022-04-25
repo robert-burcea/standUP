@@ -16,6 +16,7 @@ function App() {
   }, [screen])
   return (
     <div className="App">
+      <Header />
       {console.log(screen)}
       {screen.name === 'initial' ? <Printer /> : <></>}
       {screen.name === 'editor' ? <Editor /> : <></>}
