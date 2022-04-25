@@ -5,7 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import UserContext from './UserContext'
 
-const jokes = JSON.parse(localStorage.getItem('jokes'));
+const jokes = JSON.parse(localStorage.getItem('jokes'));//require('./jokes.json');
+console.log({jokes})
 
 ReactDOM.render(
   <UserContext value={{name:'initial', jokeID:null, jokes: jokes}}><App /></UserContext>,

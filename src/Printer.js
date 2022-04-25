@@ -12,7 +12,7 @@ export default function Printer(props) {
     changeScreen({...screen, name:'addJoke'})
   }
   return (<div className="printer">
-      {screen.jokes.map((joke) => {
+      {screen.jokes.bits.map((joke) => {
           return <JokeBox joke={joke}/>
       })}
       <button id="add-task" onClick={handleClick}>ADD A JOKE</button>

@@ -14,10 +14,10 @@ export default function JokeBox(props) {
   return (
     <div className="joke-main">
         <><div className="joke-header">
-          {props.joke.name}
+          {props.joke.title}
           <button className="edit-joke-button" onClick={handleClick}>EDIT</button>
         </div><div className="joke-content">
-            {props.joke.content}
+            {props.joke.text}
           </div><div className="joke-footer">JokeFooter</div></>   
     </div>
   )

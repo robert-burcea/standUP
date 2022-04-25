@@ -1,0 +1,102 @@
+{
+  "bits": [
+    {
+      "id": "fb924044-d760-4b5c-bb86-d598497a3fa2",
+      "title": "#shit",
+      "text": "Uneori nu conteaza ce versiune a ta esti. Deloc. V-a prins vreodată diaree intr-un moment nepotrivit? Nimic nu mai contează. Nu te te interesează sa fii cea mai bună versiune a ta. Doar sa nu te căci pe tine. Mai rau decat in filmele alea cu posedati. Stiti durerile alea, ale facerii, cu transpiratie pe fata, te inrosesti, incepi sa respiri adanc sa nu curga. Te rogi la armatele Domnului. Arhanghele Mihail Adu-mi armatele tale si protejeaza-ma ca ma cac aici in fata tuturor si ma concediaza. Pater noster qui est in celis! Doar ca te rogi sa tina demonul in tine de data asta. Tine-l, Baga-l la loc Dumnezeule, cred in Tine! Iese din mine cacutul. Satana m-a ispitit cu strugurii aia, de ce? Am fost slab!",
+      "notes": "",
+      "keywords": [],
+      "relatedBits": [],
+      "duration": 0,
+      "recorded": false,
+      "upvotes": 0,
+      "downvotes": 0,
+      "rating": 0,
+      "lastEdited": "2021-08-10T07:46:22.877Z",
+      "dateCreated": "2021-08-10T07:42:53.729Z"
+    },
+    {
+      "id": "82313e00-abeb-4798-9945-a9d60c807718",
+      "title": "#cashierproblems",
+      "text": "Nu va enervează oamenii aia care se cauta de card 2 ore când sunt la casa de marcat? Sunt ceva de genul: Cât ma costa? 34 lei. Cu cardul va rog. (Searches) Unde l-am pus. Cardul meu! Poliția! A, l-am găsit. (Se chinuie sa scoată cardul în mod ridicol). Știți ceva, haideți ca plătesc cu telefonul. Hai lăsați ca va dau o muie. De câte minute ar veni 34 de lei?",
+      "notes": "",
+      "keywords": [],
+      "relatedBits": [],
+      "duration": 0,
+      "recorded": false,
+      "upvotes": 0,
+      "downvotes": 0,
+      "rating": 0,
+      "lastEdited": "2021-08-10T07:32:02.946Z",
+      "dateCreated": "2021-08-10T07:32:02.946Z"
+    },
+    {
+      "id": "aae9fbed-78ed-44b2-a6f9-b42a15e2fcb2",
+      "title": "#incommonwithmydog",
+      "text": "Eu am niște lucruri în comun cu câinele meu. Eu nu pot sa inghit pastile decât cu foarte mare greutate. Am asta in comun cu câinele meu. Deci dacă trebuie sa iau un paracetamol mie trebuie sa mi-l înfășori în parizer si sa mi-l dai și sa nu stiu ca e acolo. Ca dacă aflu pot sa și mușc.",
+      "notes": "Test note",
+      "keywords": [],
+      "relatedBits": [],
+      "duration": 270,
+      "recorded": false,
+      "upvotes": 0,
+      "downvotes": 0,
+      "rating": 0,
+      "lastEdited": "2021-11-09T13:04:50.838Z",
+      "dateCreated": "2021-08-10T07:17:52.279Z"
+    },
+    {
+      "id": "8e756320-2092-459e-9481-cf79c67c766b",
+      "title": "Dreams",
+      "text": "Stiti videourile alea motivationale cu You can Do It! Nu te plafona. Fii cea mai buna versiune a ta! Do it! Reclame de genul: cum sa citești o carte fara sa o citești, si ia cartea si incepe sa își dea cu ea in cap si sa murmure mmmm Mindvalley Academy. Unii suntem Samsung J5, altii sunt Galaxy Note S. Aia e. E nevoie de toti oricum. Ce-ar fi daca nimeni nu ar mai face nimic, toti ar astepta sa fie presedinti, regi, miliardari. \"Salut, da-mi si mie te rog un capucino cu lapte?\" \"Aaa,nu dute-n pula mea, cea mai buna versiune a mea nu face capucino la saraci!\"\nCând o sa fiu bătrân cu nepoți care o sa ma întrebe \"Bunicule de ce nu ai făcut nimic cu viata ta?\" Pentru ca m-am uitat la video-ul ala cu cea mai bună versiune a ta și am zis că eu merit, așa că m-am apucat de băut și mi-am distrus viața. O sa știu sa le raspund. De la stomac dragii moșului.",
+      "notes": "",
+      "keywords": [],
+      "relatedBits": [],
+      "duration": 6,
+      "recorded": true,
+      "upvotes": 0,
+      "downvotes": 0,
+      "rating": 0,
+      "lastEdited": "2021-11-08T19:34:42.642Z",
+      "dateCreated": "2021-08-10T07:12:58.469Z"
+    }
+  ],
+  "sets": [
+    {
+      "id": "eba81091-6a5d-4efe-8a18-70f7a7e40136",
+      "title": "Test set",
+      "bits": [
+        {
+          "id": "82313e00-abeb-4798-9945-a9d60c807718",
+          "title": "#cashierproblems",
+          "duration": 42
+        },
+        {
+          "id": "fb924044-d760-4b5c-bb86-d598497a3fa2",
+          "title": "#shit",
+          "duration": 76
+        },
+        {
+          "id": "aae9fbed-78ed-44b2-a6f9-b42a15e2fcb2",
+          "title": "#incommonwithmydog",
+          "duration": 35
+        },
+        {
+          "id": "8e756320-2092-459e-9481-cf79c67c766b",
+          "title": "Dreams",
+          "duration": 6
+        }
+      ],
+      "notes": "",
+      "keywords": [],
+      "estDuration": 159,
+      "duration": 0,
+      "upvotes": 0,
+      "downvotes": 0,
+      "rating": 0,
+      "lastEdited": "2021-11-09T13:03:08.940Z",
+      "dateCreated": "2021-11-09T13:03:08.940Z"
+    }
+  ],
+  "logs": []
+}
