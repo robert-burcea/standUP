@@ -7,6 +7,7 @@ import React from 'react'
 import UserContext from './UserContext'
 import { useScreen, useSetScreen } from './UserContext'
 import AddJoke from './AddJoke'
+import Search from './Search'
 
 function App() {  
   const screen = useScreen();
@@ -17,10 +18,12 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Search />
       {console.log(screen)}
       {screen.name === 'initial' ? <Printer /> : <></>}
       {screen.name === 'editor' ? <Editor /> : <></>}
       {screen.name === 'addJoke' ? <AddJoke /> : <></>}
+      {screen.name === 'search' ? <></> : <></>}
     </div>
   );
 }

@@ -23,8 +23,8 @@ export default function Editor() {
   const handleRemove = (e) => {
     const confirmBox = window.confirm("Are you sure you want to delete this joke?");
     if(confirmBox) {
-      let jokeIndex = screen.jokes.findIndex(x => x.id === screen.jokeID);
-      let newJokes = screen.jokes;
+      let jokeIndex = screen.jokes.bits.findIndex(x => x.id === screen.jokeID);
+      let newJokes = screen.jokes.bits;
       newJokes.splice(jokeIndex,1)
       changeScreen({...screen, jokeID:null, activeJoke:null, name:'initial', jokes: newJokes})
     }

@@ -1,3 +1,4 @@
+
 .joke-main {
     display:flex;
     flex-direction:column;
@@ -15,15 +16,17 @@
 .joke-header, .joke-footer {
     flex:1;
     display:flex;
+    position:relative;
+    padding:inherit;
     flex-direction: row;
     height:max-content;
-    width:auto;
+    width:100%;
     color:rgb(245, 245, 245);
-    background-color: brown;
+    background-color: rgb(197, 38, 38);
     border-style: solid;
-    border-color:antiquewhite;
     border-radius:5%;
     align-items: center;
     justify-content:center;
     margin: 2% 2% 2% 2%;
+    border-top-left-radius: 5%;
 }
