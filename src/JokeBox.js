@@ -13,6 +13,7 @@ import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import EditIcon from '@mui/icons-material/Edit';
+import { TextField } from '@mui/material';
 
 
 export default function JokeBox({joke}) {
@@ -22,13 +23,15 @@ export default function JokeBox({joke}) {
     changeScreen({...screen, name:'editor', jokeID:joke.id, activeJoke: joke})
   }
   return (
-    <Card>
+    <Card sx = {{m:1.3}}>
         <CardHeader
           title={joke.title}
         />
         <CardContent>
           <Typography variant="body2" color="text.secondary">
-           {joke.text}
+           {screen.name === 'initial' ? joke.text : <TextField value={joke.text} 
+           id="outlined-basic" label="Outlined" variant="outlined" multiline={true} fullWidth
+           helperText="Joke"/>}
          </Typography>
         </CardContent>
         <CardActions disableSpacing>

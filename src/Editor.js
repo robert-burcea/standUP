@@ -1,5 +1,19 @@
 import React, {useState} from 'react'
 import { useScreen, useSetScreen } from './UserContext'
+import { styled } from '@mui/material/styles';
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Typography from '@mui/material/Typography';
+import IconButton, { IconButtonProps } from '@mui/material/IconButton';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import ShareIcon from '@mui/icons-material/Share';
+import EditIcon from '@mui/icons-material/Edit';
+import SaveIcon from '@mui/icons-material/Save';
+import CancelIcon from '@mui/icons-material/Cancel';
+import DeleteIcon from '@mui/icons-material/Delete';
+import { TextField } from '@mui/material';
 
 export default function Editor() {
   const screen = useScreen();
@@ -33,12 +47,38 @@ export default function Editor() {
     changeScreen({...screen,name:'initial'});
   }
   return (
-    <div>
+    /*<div>
       Title:<input type="text" onChange={getTitleInput} value={title}/>
       Text:<input type="text" onChange={getTextInput} value={text}/>
       <button onClick={handleSubmit}>SUBMIT CHANGES</button>
       <button onClick={handleRemove}>REMOVE JOKE</button>
       <button onClick={handleCancel}>CANCEL</button>
-    </div>
+    </div> */
+    <Card sx = {{m:1.3}}>
+      <CardHeader
+        title={title}
+      />
+      <CardContent>
+        <Typography variant="body2" color="text.secondary">
+          <TextField value={title} 
+          id="outlined-basic" label="Title" variant="outlined" multiline={true} fullWidth
+          onChange={getTitleInput}/>
+          <TextField value={text} 
+          id="outlined-basic" label="Text" variant="outlined" multiline={true} fullWidth
+          onChange={getTextInput}/>
+        </Typography>
+      </CardContent>
+      <CardActions disableSpacing>
+        <IconButton aria-label="save" onClick={handleSubmit}>
+          <SaveIcon />
+        </IconButton>
+        <IconButton aria-label="cancel" onClick={handleCancel}>
+          <CancelIcon />
+        </IconButton>
+        <IconButton aria-label="delete" onClick={handleRemove}>
+          <DeleteIcon />
+        </IconButton>
+      </CardActions>
+    </Card>
   )
 }

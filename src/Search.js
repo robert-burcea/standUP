@@ -11,9 +11,6 @@ export default function Search() {
             return bit.text.includes(value) && <JokeBox joke={bit} />
         })
     }
-    useEffect(() => {
-
-    },[value])
   return (
     <div>
         Search joke:<input type="text" className="search-button" value={value} onChange={(e) => {changeScreen({...screen, name:'search'}); setValue(e.target.value); console.log(value)}}></input>

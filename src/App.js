@@ -8,6 +8,7 @@ import UserContext from './UserContext'
 import { useScreen, useSetScreen } from './UserContext'
 import AddJoke from './AddJoke'
 import Search from './Search'
+import JokeBox from './JokeBox'
 
 function App() {  
   const screen = useScreen();
