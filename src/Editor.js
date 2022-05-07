@@ -14,6 +14,7 @@ import SaveIcon from '@mui/icons-material/Save';
 import CancelIcon from '@mui/icons-material/Cancel';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { TextField } from '@mui/material';
+import { Button } from '@mui/material';
 
 export default function Editor() {
   const screen = useScreen();
@@ -40,6 +41,7 @@ export default function Editor() {
       let jokeIndex = screen.jokes.bits.findIndex(x => x.id === screen.jokeID);
       let newJokes = screen.jokes.bits;
       newJokes.splice(jokeIndex,1)
+      console.log(newJokes)
       changeScreen({...screen, jokeID:null, activeJoke:null, name:'initial', jokes: newJokes})
     }
   }
@@ -69,14 +71,14 @@ export default function Editor() {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="save" onClick={handleSubmit}>
-          <SaveIcon />
+      <IconButton aria-label="edit" >
+          <Button variant="contained" size="large" endIcon={<SaveIcon />} onClick={handleSubmit}> SAVE </Button>
         </IconButton>
-        <IconButton aria-label="cancel" onClick={handleCancel}>
-          <CancelIcon />
+        <IconButton aria-label="edit" >
+          <Button variant="contained" size="large" endIcon={<CancelIcon />} onClick={handleCancel}> CANCEL </Button>
         </IconButton>
-        <IconButton aria-label="delete" onClick={handleRemove}>
-          <DeleteIcon />
+        <IconButton aria-label="edit" >
+          <Button variant="contained" size="large" endIcon={<DeleteIcon />} onClick={handleRemove}> DELETE </Button>
         </IconButton>
       </CardActions>
     </Card>

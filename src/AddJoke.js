@@ -1,6 +1,9 @@
 import React, {useState} from 'react'
 import { useScreen, useSetScreen } from './UserContext'
 import {v4 as uuidv4} from 'uuid';
+import { Button } from '@mui/material';
+import SendIcon from '@mui/icons-material/Send';
+import CancelIcon from '@mui/icons-material/Cancel';
 
 export default function AddJoke() {
   const screen = useScreen();
@@ -25,8 +28,8 @@ export default function AddJoke() {
     <div>
       Title:<input type="text" onChange={getTitleInput} value={title}/>
       Text:<input type="text" onChange={getTextInput} value={text}/>
-      <button onClick={handleSubmit}>SUBMIT CHANGES</button>
-      <button onClick={handleCancel}>CANCEL</button>
+      <Button variant="contained" size="large" endIcon={<SendIcon />} onClick={handleSubmit}> SUBMIT </Button>
+      <Button variant="contained" size="large" endIcon={<CancelIcon />} onClick={handleCancel}> CANCEL </Button>
     </div>
   )
 }
