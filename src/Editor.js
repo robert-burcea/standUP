@@ -42,20 +42,13 @@ export default function Editor() {
       let newJokes = screen.jokes.bits;
       newJokes.splice(jokeIndex,1)
       console.log(newJokes)
-      changeScreen({...screen, jokeID:null, activeJoke:null, name:'initial', jokes: newJokes})
+      changeScreen({...screen, jokeID:null, activeJoke:null, name:'initial', jokes: {...screen.jokes, bits:newJokes}})
     }
   }
   const handleCancel = (e) => {
     changeScreen({...screen,name:'initial'});
   }
   return (
-    /*<div>
-      Title:<input type="text" onChange={getTitleInput} value={title}/>
-      Text:<input type="text" onChange={getTextInput} value={text}/>
-      <button onClick={handleSubmit}>SUBMIT CHANGES</button>
-      <button onClick={handleRemove}>REMOVE JOKE</button>
-      <button onClick={handleCancel}>CANCEL</button>
-    </div> */
     <Card sx = {{m:1.3}}>
       <CardHeader
         title={title}

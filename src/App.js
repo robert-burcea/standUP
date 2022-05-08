@@ -19,12 +19,11 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Search />
       {console.log(screen)}
       {screen.name === 'initial' ? <Printer /> : <></>}
       {screen.name === 'editor' ? <Editor /> : <></>}
       {screen.name === 'addJoke' ? <AddJoke /> : <></>}
-      {screen.name === 'search' ? <></> : <></>}
+      {screen.name === 'search' ? <Search /> : <></>}
     </div>
   );
 }

@@ -11,3 +11,19 @@
   color:red;
 }
 
+.header {
+  display:flex;
+  justify-content:space-between;
+}
+
+.title {
+  margin-left:2%;
+}
+
+.header-title {
+  flex:1;
+}
+
+.header-search-btn {
+  flex:1;
+}
