@@ -5,6 +5,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { Fab } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import logo from './img/stand-up.png';
 
 export default function Header() {
   const screen = useScreen();
@@ -16,9 +17,12 @@ export default function Header() {
   const handleAdd = () => {
     changeScreen({...screen, name:'addJoke'})
   }
+  const handleLogo = () => {
+    changeScreen({...screen, name:'initial'})
+  }
   return (
     <div className="header">
-      <div className="title"><h1 className="header-title">STAND <span class="red"><ArrowUpwardIcon sx={{fontSize:30}}/></span> JOKES</h1></div>
+      <div className="title" onClick={handleLogo}><h1 className="header-title"><img src={logo} style={{width:'140px', height:'60px'}}></img></h1></div>
         <nav>
           <span className="header-search-btn">
           <Fab size="large" color="secondary" aria-label="add" onClick={handleAdd}>

@@ -17,7 +17,7 @@ import { TextField } from '@mui/material';
 import { Button } from '@mui/material';
 
 
-export default function JokeBox({joke}) {
+export default function JokeBox({joke, id}) {
   const screen = useScreen();
   const changeScreen = useSetScreen();
   const handleClick = () => {
@@ -36,9 +36,7 @@ export default function JokeBox({joke}) {
          </Typography>
         </CardContent>
         <CardActions disableSpacing>
-        <IconButton aria-label="edit" >
           <Button variant="contained" size="large" endIcon={<EditIcon />} onClick={handleClick}> EDIT </Button>
-        </IconButton>
       </CardActions>
     </Card>
   )

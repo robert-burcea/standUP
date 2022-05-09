@@ -33,7 +33,11 @@ export default function Editor() {
     newJokes[jokeIndex].title = title;
     newJokes[jokeIndex].text = text;
     newJokes[jokeIndex].lastEdited = new Date();
-    changeScreen({...screen, jokeID:null, activeJoke:null, name:'initial', jokes: {...screen.jokes, bits:newJokes}});
+    changeScreen({...screen, 
+      jokeID:null, 
+      activeJoke:null, 
+      name:'initial', 
+    jokes: {...screen.jokes, bits:newJokes}});
   }
   const handleRemove = (e) => {
     const confirmBox = window.confirm("Are you sure you want to delete this joke?");
@@ -42,7 +46,11 @@ export default function Editor() {
       let newJokes = screen.jokes.bits;
       newJokes.splice(jokeIndex,1)
       console.log(newJokes)
-      changeScreen({...screen, jokeID:null, activeJoke:null, name:'initial', jokes: {...screen.jokes, bits:newJokes}})
+      changeScreen({...screen, 
+        jokeID:null, 
+        activeJoke:null, 
+        name:'initial', 
+      jokes: {...screen.jokes, bits:newJokes}})
     }
   }
   const handleCancel = (e) => {
@@ -64,15 +72,12 @@ export default function Editor() {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-      <IconButton aria-label="edit" >
-          <Button variant="contained" size="large" endIcon={<SaveIcon />} onClick={handleSubmit}> SAVE </Button>
-        </IconButton>
-        <IconButton aria-label="edit" >
-          <Button variant="contained" size="large" endIcon={<CancelIcon />} onClick={handleCancel}> CANCEL </Button>
-        </IconButton>
-        <IconButton aria-label="edit" >
-          <Button variant="contained" size="large" endIcon={<DeleteIcon />} onClick={handleRemove}> DELETE </Button>
-        </IconButton>
+          <Button variant="contained" size="large" endIcon={<SaveIcon />} 
+          onClick={handleSubmit}> SAVE </Button>
+          <Button variant="contained" size="large" endIcon={<CancelIcon />} 
+          onClick={handleCancel}> CANCEL </Button>
+          <Button variant="contained" size="large" endIcon={<DeleteIcon />} 
+          onClick={handleRemove}> DELETE </Button>
       </CardActions>
     </Card>
   )
