@@ -27,6 +27,7 @@
 .title {
   margin-left:2%;
 }
+
 .title:hover {
   cursor:pointer;
 }
@@ -37,4 +38,14 @@
 
 .header-search-btn {
   flex:1;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(../pixel-dead.ttf);
+}
+
+h1 {
+  font-family: myFirstFont;
+  color: darkgreen;
 }

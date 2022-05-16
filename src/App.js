@@ -9,8 +9,9 @@ import { useScreen, useSetScreen } from './UserContext'
 import AddJoke from './AddJoke'
 import Search from './Search'
 import JokeBox from './JokeBox'
+import { app, database } from './firebaseConfig';
 
-function App() {  
+function App({database}) {  
   const screen = useScreen();
   const changeScreen = useSetScreen();
   useEffect(() => {
