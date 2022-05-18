@@ -48,10 +48,15 @@ function App() {
       {!login ? <Login /> : <></>}
       {<Header />}
       {console.log(screen)}
-      {screen.name === 'initial' && login && dataReady ? <Printer /> : <>Loading data...</>}
-      {screen.name === 'editor' && login && dataReady ? <Editor updateData={updateData}/> : <></>}
-      {screen.name === 'addJoke' && login && dataReady ? <AddJoke updateData={updateData}/> : <></>}
-      {screen.name === 'search' && login && dataReady ? <Search /> : <></>}
+      {screen.name === 'initial' && login && dataReady ? 
+      <Printer /> : screen.name === 'initial' ? 
+      <>Loading data...</> : <></>}
+      {screen.name === 'editor' && login && dataReady ? 
+      <Editor updateData={updateData}/> : <></>}
+      {screen.name === 'addJoke' && login && dataReady ? 
+      <AddJoke updateData={updateData}/> : <></>}
+      {screen.name === 'search' && login && dataReady ? 
+      <Search /> : <></>}
     </div>
   );
 }
