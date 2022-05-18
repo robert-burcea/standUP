@@ -10,21 +10,48 @@ import AddJoke from './AddJoke'
 import Search from './Search'
 import JokeBox from './JokeBox'
 import { app, database } from './firebaseConfig';
+import Login from './Login'
 
-function App({database}) {  
+function App() {  
+  const [dataReady, setDataReady] = useState()
   const screen = useScreen();
   const changeScreen = useSetScreen();
+  const login = true;
+  const docRef = database.collection("users").doc(screen.id);
+  const getData = () => {
+    docRef.get()
+    .then((doc) => {
+      if(doc.exists) {
+        console.log(doc.data());
+        changeScreen({...screen, jokes:doc.data().jokes})
+        setDataReady(true)
+      }
+    else {
+      console.log("No such document")
+    }
+    })
+    .catch((error) =>{
+      console.log("Error getting document:", error)
+    })
+  }
+
+  const updateData = () => {
+    docRef.update({jokes:{...screen.jokes}})
+  }
+
   useEffect(() => {
-    localStorage.setItem('jokes', JSON.stringify(screen.jokes));
-  }, [screen])
+    getData();
+  }, [])
+
   return (
     <div className="App">
-      <Header />
+      {!login ? <Login /> : <></>}
+      {<Header />}
       {console.log(screen)}
-      {screen.name === 'initial' ? <Printer /> : <></>}
-      {screen.name === 'editor' ? <Editor /> : <></>}
-      {screen.name === 'addJoke' ? <AddJoke /> : <></>}
-      {screen.name === 'search' ? <Search /> : <></>}
+      {screen.name === 'initial' && login && dataReady ? <Printer /> : <>Loading data...</>}
+      {screen.name === 'editor' && login && dataReady ? <Editor updateData={updateData}/> : <></>}
+      {screen.name === 'addJoke' && login && dataReady ? <AddJoke updateData={updateData}/> : <></>}
+      {screen.name === 'search' && login && dataReady ? <Search /> : <></>}
     </div>
   );
 }

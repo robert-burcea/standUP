@@ -4,14 +4,14 @@ import './css/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import UserContext from './UserContext'
+import {v4 as uuidv4} from 'uuid';
 
-const jokes = JSON.parse(localStorage.getItem('jokes'));//require('./jokes.json');
-console.log({jokes})
+const userID = "95e32118-c1e9-4996-b5e0-c13c5989494d"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <UserContext value={{name:'initial', jokeID:null, jokes: jokes}}><App /></UserContext>
+    <UserContext value={{id:userID, name:'initial', jokeID:null, dataReceived: false}}><App /></UserContext>
   </React.StrictMode>
 );
 

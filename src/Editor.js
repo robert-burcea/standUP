@@ -16,7 +16,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { TextField } from '@mui/material';
 import { Button } from '@mui/material';
 
-export default function Editor() {
+export default function Editor(props) {
   const screen = useScreen();
   const changeScreen = useSetScreen();
   const [title,setTitle] = useState(screen.activeJoke.title)
@@ -38,6 +38,7 @@ export default function Editor() {
       activeJoke:null, 
       name:'initial', 
     jokes: {...screen.jokes, bits:newJokes}});
+    props.updateData();
   }
   const handleRemove = (e) => {
     const confirmBox = window.confirm("Are you sure you want to delete this joke?");
@@ -52,6 +53,7 @@ export default function Editor() {
         name:'initial', 
       jokes: {...screen.jokes, bits:newJokes}})
     }
+    props.updateData();
   }
   const handleCancel = (e) => {
     changeScreen({...screen,name:'initial'});

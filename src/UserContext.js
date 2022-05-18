@@ -15,10 +15,10 @@ export const useSetScreen = () => {
 export default function UserContext({value, children}) {
     const [screen, setScreen] = useState(value)
   return (
-    <Screen.Provider value={screen}>
-        <SetScreen.Provider value={setScreen}>
-            {children}
-        </SetScreen.Provider>
-    </Screen.Provider>
+        <Screen.Provider value={screen}>
+            <SetScreen.Provider value={setScreen}>
+                {children}
+            </SetScreen.Provider>
+        </Screen.Provider>
   )
 }

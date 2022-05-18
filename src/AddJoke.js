@@ -5,21 +5,32 @@ import { Button } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import CancelIcon from '@mui/icons-material/Cancel';
 
-export default function AddJoke() {
+export default function AddJoke(props) {
   const screen = useScreen();
   const changeScreen = useSetScreen();
   const [title,setTitle] = useState();
   const [text,setText] = useState();
   const getTitleInput = (e) => {
     setTitle(e.target.value);
+    console.log(title)
   }
   const getTextInput = (e) => {
     setText(e.target.value);
+    console.log(text)
   }
   const handleSubmit = (e) => {
-    let newJokes = screen.jokes.bits;
+    var newJokes = [];
+    if(screen.jokes?.bits?.length > 0)
+      newJokes = screen.jokes.bits;
     newJokes.push({id:uuidv4(), title:title, text:text, dateCreated:new Date()});
-    changeScreen({...screen, jokes:{...screen.jokes, bits:newJokes}, name:'initial'});
+    console.log("newJokes:", newJokes);
+    changeScreen({
+      ...screen, 
+      jokes:{...screen.jokes, bits:newJokes}, 
+      name:'initial'
+    });
+    console.log(screen)
+    props.updateData();
   }
   const handleCancel = (e) => {
     changeScreen({...screen,name:'initial'});

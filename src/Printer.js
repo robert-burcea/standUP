@@ -6,13 +6,13 @@ import { useScreen, useSetScreen } from './UserContext'
 import Footer from './Footer'
 import { Fab } from '@mui/material';
 
-export default function Printer(props) {
+export default function Printer() {
   const screen = useScreen();
   const changeScreen = useSetScreen();
   return (<div className="printer">
-      {screen.jokes.bits.map((joke) => {
+      {screen.jokes.bits?.length > 0 ? screen.jokes.bits.map((joke) => {
           return <JokeBox joke={joke} key={joke.id}/>
-      })}
+      }) : <>No jokes to display, write one</>}
       <Footer />
   </div>
   )
