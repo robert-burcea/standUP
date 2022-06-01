@@ -11,7 +11,7 @@ const userID = "95e32118-c1e9-4996-b5e0-c13c5989494d"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <UserContext value={{id:userID, name:'initial', jokeID:null, dataReceived: false}}><App /></UserContext>
+    <UserContext value={{id:userID, name:'bits', jokeID:null, dataReceived: false}}><App /></UserContext>
   </React.StrictMode>
 );
 

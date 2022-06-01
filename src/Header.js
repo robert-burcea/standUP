@@ -18,7 +18,7 @@ export default function Header() {
     changeScreen({...screen, name:'addJoke'})
   }
   const handleLogo = () => {
-    changeScreen({...screen, name:'initial'})
+    changeScreen({...screen, name:'bits'})
   }
   return (
     <div className="header">

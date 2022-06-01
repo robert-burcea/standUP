@@ -4,6 +4,13 @@ import {v4 as uuidv4} from 'uuid';
 import { Button } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import CancelIcon from '@mui/icons-material/Cancel';
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Typography from '@mui/material/Typography';
+import { TextField } from '@mui/material';
+import SaveIcon from '@mui/icons-material/Save';
 
 export default function AddJoke(props) {
   const screen = useScreen();
@@ -27,20 +34,42 @@ export default function AddJoke(props) {
     changeScreen({
       ...screen, 
       jokes:{...screen.jokes, bits:newJokes}, 
-      name:'initial'
+      name:'bits'
     });
     console.log(screen)
     props.updateData();
   }
   const handleCancel = (e) => {
-    changeScreen({...screen,name:'initial'});
+    changeScreen({...screen,name:'bits'});
   }
-  return (
+  /*return (
     <div>
       Title:<input type="text" onChange={getTitleInput} value={title}/>
       Text:<input type="text" onChange={getTextInput} value={text}/>
       <Button variant="contained" size="large" endIcon={<SendIcon />} onClick={handleSubmit}> SUBMIT </Button>
       <Button variant="contained" size="large" endIcon={<CancelIcon />} onClick={handleCancel}> CANCEL </Button>
     </div>
+  )*/
+  return(<Card sx = {{m:1.3}}>
+      <CardHeader
+        title={title}
+      />
+      <CardContent>
+        <Typography variant="body2" color="text.secondary">
+          <TextField value={title} 
+          id="outlined-basic" label="Title" variant="outlined" multiline={true} fullWidth
+          onChange={getTitleInput}/>
+          <TextField value={text} 
+          id="outlined-basic" label="Text" variant="outlined" multiline={true} fullWidth
+          onChange={getTextInput}/>
+        </Typography>
+      </CardContent>
+      <CardActions disableSpacing>
+          <Button variant="contained" size="large" endIcon={<SaveIcon />} 
+          onClick={handleSubmit}> SAVE </Button>
+          <Button variant="contained" size="large" endIcon={<CancelIcon />} 
+          onClick={handleCancel}> CANCEL </Button>
+      </CardActions>
+    </Card>
   )
 }

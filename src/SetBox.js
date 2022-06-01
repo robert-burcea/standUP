@@ -17,25 +17,25 @@ import { TextField } from '@mui/material';
 import { Button } from '@mui/material';
 
 
-export default function JokeBox({joke, id}) {
-  const screen = useScreen();
-  const changeScreen = useSetScreen();
-  const handleClick = () => {
-    changeScreen({...screen, name:'editor', jokeID:joke.id, activeJoke: joke})
-  }
-  return (
-    <Card sx = {{m:1.3}}>
-        <CardHeader
-          title={joke.title}
-        />
-        <CardContent>
-          <Typography variant="body2" color="text.secondary">
-           {joke.text}
-         </Typography>
-        </CardContent>
-        <CardActions disableSpacing>
-          <Button variant="contained" size="large" endIcon={<EditIcon />} onClick={handleClick}> EDIT </Button>
-      </CardActions>
-    </Card>
-  )
+export default function SetBox(props) {
+    const screen = useScreen();
+    const changeScreen = useSetScreen();
+    const handleClick = () => {
+      changeScreen({...screen, name:'editor'})
+    }
+    return (
+      <Card sx = {{m:1.3}}>
+          <CardHeader
+            title={props.set.title}
+          />
+          <CardContent>
+            <Typography variant="body2" color="text.secondary">
+             {props.set.title}
+           </Typography>
+          </CardContent>
+          <CardActions disableSpacing>
+            <Button variant="contained" size="large" endIcon={<EditIcon />} onClick={handleClick}> EDIT </Button>
+        </CardActions>
+      </Card>
+    )
 }
