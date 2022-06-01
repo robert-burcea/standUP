@@ -24,13 +24,15 @@ export default function SetBox(props) {
       changeScreen({...screen, name:'editor'})
     }
     return (
-      <Card sx = {{m:1.3}}>
+      <Card sx = {{m:1.3}} draggable>
           <CardHeader
             title={props.set.title}
           />
           <CardContent>
             <Typography variant="body2" color="text.secondary">
-             {props.set.title}
+             {props.set.bits.map((bit) => {
+                 return <span>{bit.title}<br></br></span>
+             })}
            </Typography>
           </CardContent>
           <CardActions disableSpacing>

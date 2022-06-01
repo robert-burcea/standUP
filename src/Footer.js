@@ -16,10 +16,10 @@ export default function Footer() {
   const changeScreen = useSetScreen();
 
   const handleBit = () => {
-    changeScreen({...screen, name:'bits'})
+    changeScreen({...screen, name:'bits', searchOption:'bits'})
   }
   const handleSet = () => {
-    changeScreen({...screen, name:'sets'})
+    changeScreen({...screen, name:'sets', searchOption:'sets'})
   }
   return (
     <div className="footer">

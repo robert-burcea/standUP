@@ -42,14 +42,6 @@ export default function AddJoke(props) {
   const handleCancel = (e) => {
     changeScreen({...screen,name:'bits'});
   }
-  /*return (
-    <div>
-      Title:<input type="text" onChange={getTitleInput} value={title}/>
-      Text:<input type="text" onChange={getTextInput} value={text}/>
-      <Button variant="contained" size="large" endIcon={<SendIcon />} onClick={handleSubmit}> SUBMIT </Button>
-      <Button variant="contained" size="large" endIcon={<CancelIcon />} onClick={handleCancel}> CANCEL </Button>
-    </div>
-  )*/
   return(<Card sx = {{m:1.3}}>
       <CardHeader
         title={title}

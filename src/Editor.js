@@ -36,7 +36,7 @@ export default function Editor(props) {
     changeScreen({...screen, 
       jokeID:null, 
       activeJoke:null, 
-      name:'initial', 
+      name:'bits', 
     jokes: {...screen.jokes, bits:newJokes}});
     props.updateData();
   }
@@ -50,13 +50,13 @@ export default function Editor(props) {
       changeScreen({...screen, 
         jokeID:null, 
         activeJoke:null, 
-        name:'initial', 
+        name:'bits', 
       jokes: {...screen.jokes, bits:newJokes}})
     }
     props.updateData();
   }
   const handleCancel = (e) => {
-    changeScreen({...screen,name:'initial'});
+    changeScreen({...screen,name:'bits'});
   }
   return (
     <Card sx = {{m:1.3}}>

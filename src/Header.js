@@ -15,10 +15,12 @@ export default function Header() {
     changeScreen({...screen,name:'search'});
   }
   const handleAdd = () => {
-    changeScreen({...screen, name:'addJoke'})
+    screen.name === 'bits' ? 
+    changeScreen({...screen, name:'addJoke'}) :
+    changeScreen({...screen, name:'addSet'})
   }
   const handleLogo = () => {
-    changeScreen({...screen, name:'bits'})
+    changeScreen({...screen, name:'bits', searchOption:'bits'})
   }
   return (
     <div className="header">

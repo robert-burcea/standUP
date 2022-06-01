@@ -61,7 +61,7 @@ function App() {
       {screen.name === 'addSet' && login && dataReady ? 
       <AddSet updateData={updateData}/> : <></>}
       {screen.name === 'search' && login && dataReady ? 
-      <Search choice={screen.name}/> : <></>}
+      <Search choice={screen.searchOption}/> : <></>}
       <Footer />
     </div>
   );
