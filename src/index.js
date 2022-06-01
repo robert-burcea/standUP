@@ -5,13 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import UserContext from './UserContext'
 import {v4 as uuidv4} from 'uuid';
+import './jokes.json'
 
 const userID = "95e32118-c1e9-4996-b5e0-c13c5989494d"
+const jokes = require('./jokes.json')
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <UserContext value={{id:userID, name:'bits', jokeID:null, dataReceived: false}}><App /></UserContext>
+    <UserContext value={{id:userID, name:'bits', jokes:jokes, jokeID:null, dataReceived: false}}><App /></UserContext>
   </React.StrictMode>
 );
 
