@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import JokeBox from './JokeBox'
 import './css/Printer.css'
 import UserContext from './UserContext'
@@ -11,6 +11,11 @@ export default function Printer(props) {
   const screen = useScreen();
   const changeScreen = useSetScreen();
   const reverseJokes = screen.jokes.bits.map((val, index, array) => array[array.length - 1 - index]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+
   return props.choice === 'bits' ? (<div className="printer">
       {screen.jokes.bits?.length > 0 ? reverseJokes.map((joke) => {
           return <JokeBox joke={joke} key={joke.id}/>
