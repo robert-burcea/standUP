@@ -31,7 +31,7 @@ export default function JokeBox({joke, id}) {
         />
         <CardContent>
           <Typography variant="body2" color="text.secondary">
-           <span className="text-xl">{joke.text}</span>
+           <span className="">{joke.text}</span>
          </Typography>
         </CardContent>
         <CardActions disableSpacing>
