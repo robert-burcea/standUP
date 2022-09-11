@@ -44,7 +44,7 @@ function App() {
     getData();
   }, [])
   return (
-    <div className="App">
+    <div className="max-w-[1240px] mx-auto text-center">
       {!login ? <Login /> : <></>}
       {<Header />}
       {console.log(screen)}

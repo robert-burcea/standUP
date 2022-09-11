@@ -27,10 +27,10 @@ export default function Header() {
       <div className="title" onClick={handleLogo}><h1 className="header-title"><img src={logo} style={{width:'140px', height:'60px'}}></img></h1></div>
         <nav>
           <span className="header-search-btn">
-          <Fab size="large" color="secondary" aria-label="add" onClick={handleAdd}>
+          <Fab size="large" color="primary" aria-label="add" onClick={handleAdd}>
             <AddIcon />
           </Fab>
-          <Fab size="large" color="secondary" aria-label="add" onClick={handleSearch}>
+          <Fab size="large" color="primary" aria-label="add" onClick={handleSearch}>
             <SearchIcon />
           </Fab>
           </span>

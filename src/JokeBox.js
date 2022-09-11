@@ -26,11 +26,12 @@ export default function JokeBox({joke, id}) {
   return (
     <Card sx = {{m:1.3}}>
         <CardHeader
+        className="border bg-[#fcbf49] rounded p-2"
           title={joke.title}
         />
         <CardContent>
           <Typography variant="body2" color="text.secondary">
-           {joke.text}
+           <span className="text-xl">{joke.text}</span>
          </Typography>
         </CardContent>
         <CardActions disableSpacing>
